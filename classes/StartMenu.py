@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QHBoxLayout, QPushButton, QMenu, QStyle
+    QWidget, QHBoxLayout, QPushButton, QMenu, QStyle
 )
 from PyQt6.QtGui import QAction
 from PyQt6.QtCore import pyqtSignal
@@ -46,8 +46,8 @@ class StartMenu(QWidget):
 
         # Beenden-Action
         action_exit = QAction("Panel beenden", self)
-        if self.parent() and isinstance(self.parent().parent(), QMainWindow):
-            action_exit.triggered.connect(self.parent().parent().close)
+        # if self.parent() and isinstance(self.parent(), QMainWindow):
+        action_exit.triggered.connect(self.parent().quitApp)
         start_menu.addAction(action_exit)
 
         start_button.setMenu(start_menu)

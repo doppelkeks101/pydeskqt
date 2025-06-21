@@ -50,3 +50,6 @@ class PanelWindow(QMainWindow):
         print(f"Theme '{name}' wird angewendet...")
         stylesheet = ThemeManager.get_theme_stylesheet(name)
         QApplication.instance().setStyleSheet(stylesheet)
+
+    def quitApp(self):
+        QApplication.quit()

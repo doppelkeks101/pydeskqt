@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import (
     QWidget, QHBoxLayout, QPushButton, QStyle
 )
-from classes import AppLauncher
+from classes.AppLauncher import AppLauncher
 
 
 class QuickLaunchBar(QWidget):
